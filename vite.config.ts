@@ -15,7 +15,7 @@ export default defineConfig({
             })
         })
     ],
-    optimizeDeps: {
-        exclude: ['ashish-recipe-ui-kit']
+    ssr: {
+        noExternal: ['ashish-recipe-ui-kit']
     }
 });
