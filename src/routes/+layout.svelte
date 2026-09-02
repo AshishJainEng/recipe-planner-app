@@ -5,10 +5,7 @@
   let { children } = $props();
   let isLoaded = $state(false);
 
-  onMount(async () => {
-    const { defineCustomElements } = await import('ashish-recipe-ui-kit/loader');
-    defineCustomElements();
-    
+  onMount(() => {
     const storedData = localStorage.getItem('recipeMasterApp');
     if (storedData) {
       const parsedData = JSON.parse(storedData);
