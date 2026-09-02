@@ -18,10 +18,16 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                    src: 'node_modules/ashish-recipe-ui-kit/dist/ashish-recipe-ui-kit',
-                    dest: 'ui-kit'
+                    src: 'node_modules/ashish-recipe-ui-kit/dist/ashish-recipe-ui-kit/*',
+                    dest: 'ui-kit/ashish-recipe-ui-kit',
+                    rename: { stripBase: true }
+                },
+                {
+                    src: 'node_modules/ashish-recipe-ui-kit/dist/esm/*',
+                    dest: 'ui-kit/ashish-recipe-ui-kit',
+                    rename: { stripBase: true }
                 }
-            ]
+            ],
         })
     ]
 });
